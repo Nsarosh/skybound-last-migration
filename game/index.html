@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#060812">
+  <title>PROJECT: SKYBOUND — THE LAST MIGRATION</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main id="app">
+    <canvas id="arena" aria-label="Skybound tactical arena"></canvas>
+    <div class="scanlines" aria-hidden="true"></div>
+    <header id="topHud" class="hud" aria-label="Mission status">
+      <div class="brand"><span class="brand-mark">✦</span><span>PROJECT: <b>SKYBOUND</b></span><small>THE LAST MIGRATION</small></div>
+      <div class="mission"><span class="label">DREADNOUGHT INBOUND</span><strong id="timer">01:00</strong><div class="timer-track"><i id="timerFill"></i></div></div>
+      <div class="score"><span class="label">SIGNAL SCORE</span><strong id="score">000,000</strong><small id="highScore">BEST 000,000</small></div>
+    </header>
+    <section id="leftHud" class="hud side-hud" aria-label="Player status">
+      <div class="shield-title"><span>INTERCEPTOR // AURORA-7</span><b id="level">LVL 01</b></div>
+      <div class="bar shield"><i id="hpFill"></i></div><small id="hpText">120 / 120 INTEGRITY</small>
+      <div class="xp-line"><span>RESONANCE</span><span id="xpText">0 / 28</span></div><div class="bar xp"><i id="xpFill"></i></div>
+      <div class="combo"><span>COMBO</span><b id="combo">x1.0</b><i id="comboPips"></i></div>
+    </section>
+    <aside id="rightHud" class="hud telemetry"><span>SECTOR 07</span><span id="threat">THREAT // RISING</span><div class="radar"><i></i><b></b><em></em></div><small>NEONET RELAY ACTIVE</small></aside>
+    <section id="bossHud" class="boss-hud hidden"><div><span>DREADNOUGHT // HELIX-NULL</span><b id="bossHp">100%</b></div><i><b id="bossFill"></b></i></section>
+    <div id="flash" aria-hidden="true"></div>
+    <section id="modal" class="modal visible" aria-live="polite"></section>
+    <footer class="controlbar"><span><kbd>WASD</kbd><kbd>←↑↓→</kbd> MOVE</span><span><kbd>SPACE</kbd> CHRONO DASH</span><span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> SELECT</span><span><kbd>R</kbd> RESTART</span><button id="soundButton" aria-label="Toggle sound">◖ SOUND: ON</button></footer>
+  </main>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
